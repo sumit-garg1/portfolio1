@@ -9,7 +9,8 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #fff;
-    background-color: #070F2B;
+    background-color: #070F2B; /* Dark blue background */
+    scroll-behavior: smooth;
 }
 
 .navbar {
@@ -45,12 +46,13 @@ body {
 }
 
 .nav-items a:hover {
-    color: #00FFFF;
+    color: #00FFFF; /* Light blue hover color */
 }
 
 .hero-section {
     text-align: center;
     padding: 120px 20px;
+    background-color: #070F2B; /* Dark blue background */
 }
 
 #one {
@@ -90,15 +92,15 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background-color: #1B1A55;
+    background-color: #1B1A55; /* Purple background */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .facebook:hover,
 .instagram:hover,
 .linked-in:hover {
-    background-color: #00FFFF;
-    color: #1B1A55;
+    background-color: #00FFFF; /* Light blue hover background */
+    color: #1B1A55; /* Purple hover color */
 }
 
 .about-section,
@@ -107,12 +109,14 @@ body {
 .contact-section {
     padding: 100px 20px;
     text-align: center;
+    background-color: #1B1A55; /* Purple background */
 }
 
 #about-one,
 .skill-one,
 #projects-one {
     font-size: 2rem;
+    color: #00FFFF; /* Light blue text */
 }
 
 #about-two {
@@ -134,20 +138,26 @@ body {
     position: relative;
     width: 150px;
     height: 150px;
-    background-color: #1B1A55;
-    border: 2px solid #00FFFF;
+    background-color: #1B1A55; /* Purple background */
+    border: 2px solid #00FFFF; /* Light blue border */
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    color: burlywood;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: burlywood; /* Light brown text */
+    transform-style: preserve-3d; /* Enable 3D transformation */
+    animation: rotateCube 10s linear infinite; /* Continuous rotation */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8); /* Light blue shadow */
 }
 
-.cube:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+@keyframes rotateCube {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
 .grid-items {
@@ -219,60 +229,23 @@ footer {
     padding: 20px;
     background-color: #1B1A55;
 }
-/* Small devices (phones) */
-@media (max-width: 576px) {
+
+@media (max-width: 768px) {
     .nav-items {
         display: none;
     }
-
-    .logo {
-        padding-left: 10px;
+    .nav-items.open {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #070F2B;
+        position: absolute;
+        top: 70px;
+        left: 0;
     }
-
-    .hero-section {
-        padding: 80px 20px;
-    }
-
-    #one {
-        font-size: 1.5rem;
-    }
-
-    #two {
-        font-size: 2.5rem;
-    }
-
-    #three {
-        font-size: 1.2rem;
-    }
-
-    .my-img {
-        width: 150px;
-        height: 150px;
-    }
-
-    .sites {
-        margin-top: 10px;
-    }
-
-    .input {
-        max-width: 100%;
-    }
-}
-
-/* Medium devices (tablets) */
-@media (min-width: 577px) and (max-width: 768px) {
-    .nav-items {
-        padding-left: 20px;
-    }
-}
-
-/* Large devices (desktops) */
-@media (min-width: 769px) {
-    .nav-items {
-        padding-left: 100px;
-    }
-
-    .hero-section {
-        padding: 120px 20px;
+    .nav-items.open a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
     }
 }
