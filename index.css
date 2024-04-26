@@ -267,4 +267,20 @@ footer {
         width: 100%;
         text-align: center;
     }
+    .navbar {
+        height: auto; /* Change height to auto for phones */
+        padding: 20px 0; /* Adjust padding for phones */
+    }
+    .nav-items {
+        display: flex; /* Ensure nav-items are visible on phones */
+        flex-direction: column; /* Change direction to column for phones */
+        gap: 10px; /* Adjust gap for phones */
+        position: static; /* Change position to static for phones */
+        background-color: transparent; /* Remove background color for phones */
+    }
+    .nav-items a {
+        padding: 10px 20px; /* Adjust padding for phones */
+        width: auto; /* Set width to auto for phones */
+        text-align: left; /* Align text to left for phones */
+    }
 }
