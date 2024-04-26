@@ -159,50 +159,20 @@ nav {
 }
 
 @keyframes rotateCube {
-    from { transform: rotateY(0); }
-    to { transform: rotateY(360deg); }
-    
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
 }
 
-.cube {
-    position: relative;
-    width: 200px;
-    height: 200px;
-    transform-style: preserve-3d;
-    border-color: #00FFFF; /* Change border color */
-    transform: scale(1.02); /* Scale the cube slightly */
-    box-shadow: 0 0 4rem #00FFFF; /* Blue shadow effect */
-    color: burlywood; /* Change text color */
-    font-size: 2rem; /* Increase font size */
-    transition: 0.5s ease; /* Add transition effect */
-    animation: rotateCube 5s linear infinite;
-}
-
-.cube div {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    border: 2px solid white;
-    text-align: center;
-    line-height: 200px;
-    font-size: 30px;
-}
-
-.front { transform: rotateY(0deg) translateZ(100px); }
-.back { transform: rotateY(180deg) translateZ(100px); }
-.right { transform: rotateY(90deg) translateZ(100px); }
-.left { transform: rotateY(-90deg) translateZ(100px); }
-.top { transform: rotateX(90deg) translateZ(100px); }
-.bottom { transform: rotateX(-90deg) translateZ(100px); }
-
-.boxs:hover{
+.boxs:hover {
     border-color: #00FFFF;
     transform: scale(1.02);
-    /* hover for border line    */
     box-shadow: 0 0 4rem #00FFFF;
     color: aqua;
     font-size: 2rem;
-    /* font-weight: 100; */
     transition: .5s ease;
 }
 
