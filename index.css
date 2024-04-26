@@ -283,4 +283,28 @@ footer {
         width: auto; /* Set width to auto for phones */
         text-align: left; /* Align text to left for phones */
     }
+    .navbar .nav-toggle {
+        display: block; /* Display hamburger menu icon for phones */
+    }
+    .nav-toggle {
+        display: none; /* Hide hamburger menu icon by default */
+        cursor: pointer;
+        padding: 10px;
+    }
+    .nav-toggle .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px auto;
+        transition: background-color 0.3s ease;
+    }
+    .nav-toggle.open .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+    }
+    .nav-toggle.open .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle.open .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -5px);
+    }
 }
